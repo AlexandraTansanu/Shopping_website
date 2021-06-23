@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+    font-weight: 500;
+    background-color:#ccc;
+}
+
+#btn {
+	background: #997066;
+	color:#fff; 
+	padding: 0.6rem 1.3rem;
+	text-decoration: none;
+	border: 0;
+}
+
+.formWithImg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 1050px;
+    background-color:#ddd;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    color: #333;
+    order: 2; /* form on the right side */
+    font-size: 1.3rem;
+    padding-left: 1%;
+}
+
+.formWithImg img {
+    display: block;
+    width: 50%;
+    height: 100%;
+    opacity: 75%;
+    order: 1; /* img on the left side */
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1050px) {
+    /* Getting rid of the padding for body*/
+    body {
+        padding: 0;
+    }
+
+    /* Resizing the image to occupy the full with of the screen like a cover photo*/
+    .formWithImg img {
+        width: 100%;
+        height: 400px;
+    }
+
+    /* Displaying text under image */
+    .formWithImg {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+    }
+}

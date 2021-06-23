@@ -1,0 +1,263 @@
+html{
+	font-family: Arial, Helvetica, sans-serif;
+	color: #333;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 500;
+    background-color:#ccc;
+}
+
+/* Button */
+.btn {
+	background: #997066;
+	color:#fff; 
+	padding: 0.6rem 1.3rem;
+	text-decoration: none;
+	border: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+.wrapper{
+	display: grid;
+	grid-gap: 20px;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    flex-direction: row;
+    float: right;
+    background-color: #333;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    padding: 5px;
+}
+
+nav a {
+    display: block;
+    padding: 10px 50px;
+    border-radius: 2px;
+    text-decoration: none;
+    background-color: #ddd;
+    color: #333;
+	border-right: 2px solid #333;
+	border-left: 2px solid #333;
+	border-bottom: 2px solid #333;
+}
+
+/* Change color on hover */
+nav a:hover {
+    background-color: #997066;
+    color: #ddd;
+}
+ 
+/* Other links */
+a:link {
+	color: #997066;
+}
+
+a:visited {
+	color: #333;
+}
+
+/* Top container */
+.top-container {
+	display: grid;
+		grid-gap: 20px;
+		grid-template-areas: 
+			'showcase showcase offers'
+			'showcase showcase JSONoffers';
+}
+	
+/* Showcase */
+.showcase {
+	grid-area: showcase;
+	min-height: 400px;
+	background: url(img/cover.jpg);
+	background-size: cover;
+	background-position: center;
+	padding: 3rem;
+	/* Here the grid used for layout but flex box to align things inside those elements */
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+	box-shadow: 0 1px 5px rgb(104, 104, 104, 0.8);
+}
+	
+.showcase h1 {
+	font-size: 4rem;
+	margin-bottom: 0;
+	color: #fff;
+}
+	
+.showcase p {
+	font-size: 1.3rem;
+	margin-top: 0;
+	color: #fff; 
+}
+	
+/* AJAX offers */
+#offers {
+	grid-area: offers;
+	background: #997066;
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	box-shadow: 0 1px 5px rgb(104, 104, 104, 0.8);
+	padding: 1.5rem;
+}
+
+#offers p {
+	font-size: 1.3rem;
+	color: #ddd; 
+}
+	
+#JSONoffers {
+	grid-area: JSONoffers;
+	background: #ddd;
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	box-shadow: 0 1px 5px rgb(104, 104, 104, 0.8);
+	padding: 1.5rem;
+}
+
+#JSONoffers p {
+	font-size: 1.3rem;
+	color: #333; 
+}
+
+/* Info */
+#info {
+	background: #ddd;
+	box-shadow: 0 1px 5px rgb(104, 104, 104, 0.8);
+	display: grid;
+	grid-gap: 30px;
+
+	/* Splitted into two columns */
+	grid-template-columns: repeat(2, 1fr);
+	padding: 3rem;
+}
+
+/* Footer */
+footer {
+	display:flex;
+	background-color: #333;
+	color: #ddd;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+footer [class ^='footer-'] {
+    display: inline-block;
+    text-align: left;
+}
+
+footer .footer-left {
+    float: left;
+}
+
+footer .footer-right {
+    float: right;
+    padding-bottom: 20px;
+}
+
+footer .footer-right ul {
+	list-style: none;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+	/* Resizing nav bar */
+    nav ul {
+        display: inline;
+        padding: 0px;
+    }
+
+	.top-container {
+		grid-template-areas:
+			'showcase showcase'
+			'offers JSONoffers';
+	}
+	
+	.showcase h1 {
+		font-size: 2.5rem;
+	}
+	
+	.main-nav ul {
+		grid-template-columns: 1fr;
+	}
+	
+	#info {
+		grid-template-columns: 1fr;
+	}
+	
+	#info .btn {
+		display: block;
+		text-align: center;
+		margin: auto;
+	}
+}
+
+@media (max-width: 500px) {
+	.top-container {
+		grid-template-areas:
+			'showcase'
+			'offers'
+			'JSONoffers';
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
